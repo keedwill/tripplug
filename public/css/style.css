@@ -1853,17 +1853,26 @@ footer > p {
     
     height: 250px;
   }
+  .top img{
+    width: 100%;
+    height: 250px;
+  }
   .top>.carousel-item .slider-text{
     color: white;
     position: absolute;
-    width: 500px;
+    width: 275px;
     /* bottom: 20%; */
-    top: 7.5%;
-    left: 2.5%;
+    top: 15%;
+    left: 25%;
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+  }
+  .top>.carousel-item .slider-text h4{
+    font-size: 17.5px;
+    font-weight: bolder;
     
   }
   #thomalex-widget{
