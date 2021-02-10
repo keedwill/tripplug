@@ -1,0 +1,111 @@
+
+    <div class="transport-head">
+      <p>Taking You There</p>
+    </div>
+    <div class="lounge-div">
+      <div class="lounge-text">
+        
+        <h4>Every Turn, Safety First
+            Enjoy Your Next Trip</h4>
+        <p>Tripplug Airport corporate Transfer offers private transfers services, from the airports to the cities and to the tourist resorts around Lagos. You can directly book online your airport transfer services page.</p>
+          <p>The objectives are to continuously improve the offer of transfer services throughout Lagos, Nigeria always guaranteeing the utmost professionalism, to make the online booking of the services the customer needs for easier and faster to expand the offer.
+        </p>
+          
+          
+          <p>
+            Our customer service is available every day, 24 hours a day, to assist you in case of need during your transfer and to try to meet all your needs.</p>
+      </div>
+      <div class="lounge-text">
+        
+        <h4>Required Information</h4>
+        <form id="paymentform">
+            <div class="form-group">
+                <label for="">Pickup Location</label>
+                <input type="text" class="form-control" id="pickup"  >
+              </div>
+              <div class="form-group">
+                <label for="">Drop off Location</label>
+                <input type="text" class="form-control" id="dropoff" >
+              </div>
+              
+              <h5 class="mb-2" style="color: darkmagenta;">Please Select either pickup or Fullday</h5>
+              <div class="form-group">
+                <label for="sel1">Car Type (Pickup/Drop off)</label>
+                <select class="form-control" id="sel1">
+                  <option selected> Select a Car Type (Pickup/Drop off) </option>
+
+                  <option value="1800000">SUV ₦18,000 </option>
+                  <option value="1500000">BUS  ₦15,000</option>
+                  <option value="1800000">ESCORT ₦18,000  </option>
+                  <option value="1500000">SALOON CAR ₦15,000 </option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="sel1">Car Type (Fullday)</label>
+                <select class="form-control" id="sel2">
+                  <option selected> Select a Car Type (Fullday) </option>
+
+                  <option value="3000000">SUV ₦40,000 </option>
+                  <option value="1500000">BUS  ₦35,000</option>
+                  <option value="1800000">ESCORT ₦35,000  </option>
+                  <option value="1500000">SALOON CAR ₦20,000 </option>
+                </select>
+              </div>
+
+          <div class="form-group">
+            <label for="Amount">Phone Number</label>
+            <input type="phone" class="form-control" id="phone">
+          </div>
+          <div class="form-group">
+            <label for="Email">Email</label>
+            <input type="email" class="form-control" id="email">
+          </div>
+          <button type="submit" class="btn btn-primary book-now">Pay Now</button>
+        </form>
+        <div id="paystack-footer" class="paystack-footer animated fadeIn">
+          <a target="_blank" href="https://paystack.com/what-is-paystack">
+          <img alt="Paystack secured badge" src="https://i.imgur.com/PsiBB2G.png">
+           </a>
+       </div>
+      </div>
+      
+      
+    </div>
+   
+<script>
+var paymentForm = document.getElementById('paymentform');
+paymentForm.addEventListener("submit", payWithPaystack, false);
+function payWithPaystack(e) {
+e.preventDefault();
+var dropoff = document.getElementById("dropoff").value;
+var pickup = document.getElementById("pickup").value;
+var sel2 = document.getElementById("sel2").value;
+var sel1 = document.getElementById("sel1").value;
+var email = document.getElementById("email").value;
+var phone = document.getElementById("phone").value;
+if(dropoff && pickup && email && sel2 || sel1 ){
+var handler = PaystackPop.setup({
+key: 'pk_live_d047c48dc87ba7753ac95663f67043c0ffe1b90c', // Replace with your public key
+email: email,
+amount: sel1 || sel2,
+phone: phone,
+dropoff: dropoff,
+pickup:pickup,
+ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+// label: "Optional string that replaces customer email"
+onClose: function(){
+alert('Window closed.');
+},
+callback: function(response){
+var message = 'Payment complete! Reference: ' + response.reference;
+alert(message);
+}
+});
+handler.openIframe();
+}
+else{
+alert('all fields are required')
+}
+}
+
+</script>

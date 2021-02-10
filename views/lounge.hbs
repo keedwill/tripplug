@@ -1,0 +1,168 @@
+{{!-- 
+    <div class="lounge-head">
+      <p>Relax and Refuel</p>
+    </div> --}}
+   
+     
+    <div class="accordion">
+      <ul>
+        <li>
+          <img src="https://i.imgur.com/jCuNUDT.jpg" alt="">
+        </li>
+        <li>
+          <img src="https://i.imgur.com/ssPKWBZ.jpg" alt="">
+        </li>
+        <li>
+          <img src="https://i.imgur.com/8pNF9P5.jpg" alt="">
+        </li>
+        <li>
+          <img src="https://i.imgur.com/TPgPSWm.jpg" alt="">
+        </li>
+        <li>
+          <img src="https://i.imgur.com/BTdRNIa.jpg" alt="">
+        </li>
+        <li>
+          <img src="https://i.imgur.com/AfxTi2y.jpg" alt="">
+        </li>
+      </ul>
+    </div>
+   
+   
+   
+  
+  <h1 style="text-align: center; color:darkmagenta; font-weight:bolder;">AMENITIES</h1>
+  <div class="amenities">
+    <div class="shadow">
+      <h5>Food</h5>
+      <span><i class="fas fa-utensils fa-2x"></i></span>
+      <p>Enjoy Our Delicious Food From The Comfort of Your Couch.</p>
+    </div>
+    <div class="shadow">
+      <h5>Shower</h5>
+      <span><i class="fas fa-shower fa-2x"></i></span>
+      <p>Our Shower Spas has everything you need to prepare yourself for your next journey.</p>
+    </div> 
+    <div class="shadow">
+      <h5>Wifi</h5>
+      <span><i class="fas fa-wifi fa-2x"></i></span>
+      <p>Passengers Enjoy Uninterrupted Wifi Services. </p>
+      
+    </div>
+    <div class="shadow">
+      <h5>Air condition</h5>
+      <span><i class="fas fa-snowflake fa-2x"></i></span>
+      <p>Fully Air Conditioned Atmosphere.</p>
+      
+    </div>
+    <div class="shadow">
+      <h5>Drinks</h5>
+      <span><i class="fas fa-glass-martini fa-2x"></i></span>
+      <p>Enjoy a Drink , relax and be inspired in our lounge.</p>
+    </div>
+  </div>
+    
+    
+    
+    
+    
+    <div class="lounge-div">
+      <div class="lounge-text">
+        
+        <h4>Relax, Refuel And Refresh</h4>
+        <p>Whether you're travelling on business or pleasure the Oasis Lounge offers a haven of peace in Lagos International Airport.</p>
+          <p>The Oasis Lounge prides itself as the best lounge at the Muritala Mohammed International Airport, Lagos and a pioneer of luxury lounge service and experience in Nigeria. Built with luxury and comfort in mind, the Oasis Lounge provides an ambient environment to passengers with the opportunity to indulge in the rich selection of delicious meals and fully stocked bar with assorted drinks and cocktails.</p>
+          
+          
+          <p>Location: D-Wing, Departure Level. After Security Checks and Passport Control the lounge is located on the 1st Floor next to the Air France/KLM Lounge.</p>
+      </div>
+      <div class="lounge-text">
+        
+        <h4>Required Information</h4>
+        
+        <form id="paymentform" method="POST" action="/lounge" >
+          <div class="form-group">
+            <label for="exampleInputEmail1">Full Name</label>
+            <input type="text" class="form-control" id="fullname" name="fullname" aria-describedby="" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          
+          <div class="form-group">
+            <label for="Amount">Amount (NGN)</label>
+            <input type="number" placeholder="10,253" value="1025300" class="form-control" id="amount" name="amount"  disabled >
+            <small id="" class="form-text text-muted">Transaction Charge: NGN 253.81,   Total: NGN 10,253.81</small>
+
+          </div>
+          <div class="form-group">
+            <label for="">Phone Number</label>
+            <input type="phone" class="form-control" id="phonenumber" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="">Flight Number</label>
+            <input type="text" class="form-control" id="flightnumber" name="flightnumber" required>
+          </div>
+          <div class="form-group">
+            <label for="Flight date">Flight Date</label>
+            <input type="date" class="form-control" id="flightdate" name="flightdate" required>
+          </div>
+          <div class="form-group">
+            
+            <button type="submit" class="btn btn-primary book-now">Pay Now</button>
+            <!-- <button  onclick="payWithPaystack()"> Pay </button> -->
+          </div>
+        </form>
+        <div id="paystack-footer" class="paystack-footer animated fadeIn">
+          <a target="_blank" href="https://paystack.com/what-is-paystack">
+          <img alt="Paystack secured badge" src="https://i.imgur.com/PsiBB2G.png">
+           </a>
+       </div>
+      </div>
+      
+      
+    </div>
+   
+     <script>
+    
+    var paymentForm = document.getElementById('paymentform');
+    paymentForm.addEventListener("submit", payWithPaystack, false);
+    function payWithPaystack(e) {
+    e.preventDefault();
+    var email = document.getElementById("email").value;
+    var amount = document.getElementById("amount").value;
+    var fullname = document.getElementById("fullname").value;
+    var flightnumber= document.getElementById("flightnumber").value;
+    var flightdate = document.getElementById("flightdate").value;
+    var phonenumber = document.getElementById("phonenumber").value;
+    console.log( email ,amount, fullname, flightnumber, flightdate, phonenumber);
+    if(email && amount  && fullname && flightnumber && flightdate && phonenumber){
+    var handler = PaystackPop.setup({
+    key: 'pk_live_d047c48dc87ba7753ac95663f67043c0ffe1b90c', // Replace with your public key
+    email: email,
+    amount: amount,
+    fullname: fullname,
+    flightnumber: flightnumber,
+    flightdate:flightdate,
+    ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+    // label: "Optional string that replaces customer email"
+    onClose: function(){
+    alert('Window closed.');
+    },
+    callback: function(response){
+    var message = 'Payment complete! Reference: ' + response.reference;
+    alert(message);
+    }
+    });
+    handler.openIframe();
+    }
+    else{
+    alert('all fields are required')
+    }
+    }
+    
+    </script>
+    
+    
+    
