@@ -3,6 +3,9 @@ body {
   overflow-x: hidden;
   margin: 0;
 }
+.best{
+  margin-top: 30px;
+}
 .airline{
   display: flex;
   flex-direction: row;
