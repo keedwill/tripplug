@@ -4,6 +4,7 @@ body {
   margin: 0;
 }
 
+
 .tour .card-text{
   display: flex;
   justify-content: center;
@@ -2234,5 +2235,8 @@ footer > p {
     margin-left: 0;
    
     
+  }
+  #partners{
+    width: 200%;
   }
 }
