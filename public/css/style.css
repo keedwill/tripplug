@@ -1649,6 +1649,7 @@ footer > p {
     flex-basis: 100%;
   }
   .about{
+    padding: 25px;
     flex-basis: 100%;
     margin-left: 10px;
     margin-right: 10px;
