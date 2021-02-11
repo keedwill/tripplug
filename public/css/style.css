@@ -1845,10 +1845,10 @@ footer > p {
    .widget{
     position: relative;
     /* top: 0; */
-    width: 100%;
+    width: 520px;
     /* height: 100%; */
     padding: 3%;
-    margin-left: 5px;
+    margin: 0;
     /* padding-left: 10%; */
     margin-bottom: 50px;
   
