@@ -679,11 +679,11 @@ color: #6D057C;
   height: 200px;
 }
 .about{
-  height: 600px;
+  height: 650px;
   margin-left: 100px;
   margin-right: 100px;
   margin-top: 50px;
-  padding: 10px;
+  padding: 50px;
 }
 .about h3{
   color: #6D057C;
@@ -780,7 +780,7 @@ margin-bottom: 5px;
   /* background-color: tomato; */
   height: 450px;
   
-  padding: 225px;
+ 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -794,7 +794,9 @@ margin-bottom: 5px;
   /* background-color: tomato; */
   height: 450px;
   
-  padding: 225px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .tour-head p{
   color: white;
@@ -823,8 +825,10 @@ margin-bottom: 5px;
   padding: 1%;
 }
 .covid{
+  margin-top: 10px;
   margin-left: 100px;
   margin-right: 100px;
+  padding: 50px;
 }
 .screening{
   display: flex;
@@ -1008,7 +1012,7 @@ transition: 500ms linear;
 }
 .pack .btn{
   margin-top: 5px;
-  width: 50%;
+  width: 100%;
   padding: 1.5%;
   border: none;
   font-size: 1.5vw;
@@ -1059,6 +1063,15 @@ transition: 500ms linear;
   margin-right: auto;
   flex-direction: column;
   flex-basis: 25%;
+  
+}
+.contact-us .profile {
+  display: flex;
+  margin-right: auto;
+  flex-direction: column;
+  flex-basis: 23%;
+padding: 10px;
+  margin: 1%;
   
 }
 .contact > h4 {
@@ -1571,6 +1584,7 @@ footer > p {
 
   .contact-us {
     height: 100%;
+    
   }
 }
 
@@ -1621,6 +1635,14 @@ footer > p {
     margin-right: 0;
     
   }
+  .contact-us .profile {
+    flex-basis: 100%;
+    margin-bottom: 5%;
+    margin-left: 0;
+    margin-right: 0;
+    align-items: center;
+    
+  }
   .tc{
     margin-left: 0;
     margin-right: 0;
@@ -1628,10 +1650,10 @@ footer > p {
   }
   .about{
     flex-basis: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-bottom: 100px;
-    height: 700px;
+    height: 900px;
   }
   .about p{
     font-size: 14px;
@@ -1698,12 +1720,11 @@ footer > p {
     
   }
   .about-head p{
-    
-    font-size: 40px;
-    
-    width: 400px;
+    font-size: 25px;
+    padding: 1%;
+ 
     text-align: center;
-    margin-left: -120px;
+    /* margin-left: -120px; */
    
   }
   .lounge-head p{
@@ -1726,7 +1747,8 @@ footer > p {
     align-self: center;
   }
   .covid{
-    margin-left: 5px;
+    
+    margin: auto;
   }
   .feedback-head{
     height: 300px;
@@ -1745,14 +1767,18 @@ footer > p {
    
   }
   .about-head{
-    height: 300px;
-    padding: 150px;
-    align-self: center;
+    height: 225px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
   }
+  
   .travel-head{
-    height: 300px;
-    padding: 150px;
-    align-self: center;
+    height: 225px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .travel-head p{
     font-size: 40px;
@@ -2108,17 +2134,15 @@ footer > p {
   }
   
   .tour-head{
-    height: 300px;
-    padding: 150px;
-    align-self: center;
+    height: 225px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .tour-head p{
-    /* border: 1px red solid; */
-    margin-top: 30px;
+    
     font-size: 25px;
-    width: 400px;
-    text-align: center;
-    margin-left: -120px;
+   padding: 1%;
     
   }
   
