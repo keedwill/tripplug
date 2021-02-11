@@ -3,6 +3,13 @@ body {
   overflow-x: hidden;
   margin: 0;
 }
+
+.tour .card-text{
+  border: 1px red solid;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
 .best{
   margin-top: 30px;
 }
@@ -1901,6 +1908,7 @@ footer > p {
 }
 
 @media only screen and (max-width: 600px) {
+  
   .package{
     
     border: 1px red solid;
@@ -1996,7 +2004,7 @@ footer > p {
 }
 
 @media only screen and (max-width: 600px) {
-  
+
   .email {
     width: 100%;
     padding: 0;
