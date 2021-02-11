@@ -348,7 +348,7 @@ width: 650px;
   /* background-color: tomato; */
   height: 450px;
   
-  padding: 225px;
+ 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -357,6 +357,8 @@ width: 650px;
   color: white;
     font-weight: bolder;
     font-size: 80px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 1%;
 }
 .feedback-head{
   background-image: url("https://i.imgur.com/mIZ4aeA.jpg");
@@ -373,7 +375,8 @@ width: 650px;
 }
 
 .feedback-head p{
-  
+  background-color: rgba(0,0,0,0.5);
+  padding: 1%;
   color: white;
     font-weight: bolder;
     font-size: 80px;
@@ -768,7 +771,7 @@ margin-bottom: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 225px;
+  
 
 }
 .about-head{
@@ -815,7 +818,9 @@ margin-bottom: 5px;
   /* background-color: tomato; */
   height: 450px;
   
-  padding: 225px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .travel-head p{
   color: white;
@@ -1060,11 +1065,12 @@ transition: 500ms linear;
 }
 .contact-us .contact {
   display: flex;
-  margin-right: auto;
+  /* margin-right: auto; */
   flex-direction: column;
   flex-basis: 25%;
-  
+
 }
+
 .contact-us .profile {
   display: flex;
   margin-right: auto;
@@ -1077,6 +1083,7 @@ padding: 10px;
 .contact > h4 {
   color: #6D057C;
   font-weight: bolder;
+ 
 }
 .social > h4 {
   color: #6D057C;
@@ -1730,41 +1737,53 @@ footer > p {
   }
   .lounge-head p{
     
-    font-size: 40px;
+    font-size: 25px;
     
-    width: 400px;
+    /* width: 400px;
     text-align: center;
-    margin-left: -120px;
+    margin-left: -120px; */
    
   }
   .lounge-head{
-    height: 300px;
-    padding: 150px;
-    align-self: center;
+    height: 225px;
+
+  }
+  .airline{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 25px;
+  }
+  .airline-text{
+    flex-basis: 100%;
   }
   .airline-head{
-    height: 300px;
-    padding: 150px;
+    height: 225px;
+   
     align-self: center;
+  }
+  .airline-head p{
+    font-size: 25px;
   }
   .covid{
     
     margin: auto;
   }
   .feedback-head{
-    height: 300px;
-    padding: 150px;
-    align-self: center;
+    height: 225px;
+    
+  
   }
   
   .feedback-head p{
     
+    padding: 1%;
+    font-size: 25px;
     
-    font-size: 40px;
-    
-    width: 400px;
-    text-align: center;
-    margin-left: -120px;
+    background-color: rgba(0,0,0,0.5);
+  
    
   }
   .about-head{
@@ -1782,11 +1801,11 @@ footer > p {
     align-items: center;
   }
   .travel-head p{
-    font-size: 40px;
+    font-size: 25px;
     
-    width: 400px;
+    /* width: 400px; */
     text-align: center;
-    margin-left: -120px;
+    /* margin-left: -120px; */
   }
   .before-footer{
     display: flex;
@@ -2147,4 +2166,18 @@ footer > p {
     
   }
   
+  .privacy{
+    padding: 25px;
+    margin-top: 20px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .privacy h4, h1,h6{
+    margin-top: 10px;
+    color: #6D057C;
+    font-weight: bolder;
+  }
+  .privacy ul{
+    line-height: 2rem;
+  }
 }
