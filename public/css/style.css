@@ -5,7 +5,6 @@ body {
 }
 
 .tour .card-text{
-  border: 1px red solid;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -1861,7 +1860,6 @@ footer > p {
     height: 100%;
   }
   .top {
-    border: 1px red solid;
     
     height: 250px;
   }
@@ -1883,7 +1881,6 @@ footer > p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px red solid;
   }
   .top>.carousel-item .slider-text h4{
     font-size: 17.5px;
