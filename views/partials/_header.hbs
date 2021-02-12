@@ -19,15 +19,20 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto" style="margin-right: 100px;">
-          <li class="nav-item active">
-            <a class="nav-link" href="/" id="menu"
-              >Home <span class="sr-only">(current)</span></a
-            >
+          <li class="nav-item">
+            
+            <a  {{#if  " '/' ==  req.url "}}
+              class="nav-link active"
+              {{else}}  
+              class="nav-link" 
+            {{/if}} href="/" id="menu"
+              >Home <span class="sr-only">(current)</span></a>
           </li>
           {{!-- <li class="nav-item"> 
             <a class="nav-link" href="" id="menu">  Hotels</a>
           </li> --}}
           <li class="nav-item">
+            
             <a class="nav-link" href="/tours" id="menu">Tour Packages</a>
           </li>
           <li class="nav-item">
