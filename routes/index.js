@@ -51,9 +51,9 @@ router.get("/covid-test", (req, res) => {
     res.render("feedback");
   });
   
-  router.get("/logistics", (req, res) => {
-    res.render("logistics");
-  });
+  // router.get("/logistics", (req, res) => {
+  //   res.render("logistics");
+  // });
   
   router.get("/about", (req, res) => {
     res.render("about");
