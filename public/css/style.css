@@ -982,7 +982,6 @@ background-color: #6d057c;
   color: white;
   
   display: flex;
-background-color: #ee1e2f;
 
   height: 300px;
   /* margin-left: 100px;
@@ -994,19 +993,29 @@ background-color: #ee1e2f;
   margin-top: 200px;
 }
 .transport-text{
-  border: 1px red solid;
   display: flex;
   margin-right: auto;
   flex-direction: column;
   flex-basis: 50%;
   padding: 10px;
 }
+.transport-text .btn{
+  width: 50%;
+  padding: 10px;
+  /* margin-bottom: 5px; */
+  border-radius: 35px;
+  font-size: 12px;
+  
+ background-color:brown ;
+ 
+  border: none;
+  color: white;
+}
 .transport-text p{
   font-weight: bolder;
 }
 
 .transport-text img{
-  border: 1px red solid;
   
   width: 80%;
   margin-top:-25%;
