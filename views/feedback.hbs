@@ -14,31 +14,31 @@
       <div class="lounge-text">
         
         <h4>Required Information</h4>
-        
-        <form id="paymentform"  >
+        {{> _messages}}
+        <form id="" action="/feedback" method="POST"  >
             <div class="form-group category">
               <p for="">Category</p>
-              <label class="radio-inline"><input type="radio" name="optradio" checked>Hotels</label>
-              <label class="radio-inline"><input type="radio" name="optradio">Oasis Lounge</label>
-              <label class="radio-inline"><input type="radio" name="optradio">Airport Transfers</label>
-              <label class="radio-inline"><input type="radio" name="optradio">Others</label>
+              <label class="radio-inline"><input type="radio" name="category" value="hotels" checked>Hotels</label>
+              <label class="radio-inline"><input type="radio" name="category" value="Oasis lounge">Oasis Lounge</label>
+              <label class="radio-inline"><input type="radio" name="category" value="Airport Transfers">Airport Transfers</label>
+              <label class="radio-inline"><input type="radio" name="category" value="Others">Others</label>
               </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Full Name</label>
-            <input type="text" class="form-control" id="fullname" aria-describedby="" required>
+            <input type="text" class="form-control" id="fullname" name="fullname" aria-describedby="" required>
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email"  required>
+            <input type="email" class="form-control" id="email" name="email"  required>
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
           <div class="form-group">
             <label for="exampleFormControlTextarea1">Message</label>
-            <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="10"></textarea>
+            <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" name="message" rows="10"></textarea>
           </div>
           <div class="form-group">
             <label for="Amount">Phone Number</label>
-            <input type="phone" class="form-control" id="phonenumber" required>
+            <input type="phone" class="form-control" id="phonenumber" name="phone" required>
           </div>
          
           <div class="form-group">
@@ -49,7 +49,7 @@
        
       </div>
       
-      
+     
     </div>
     
    

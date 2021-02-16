@@ -1,66 +1,49 @@
- <nav class="navbar navbar-expand-lg navbar-light bg-light menubar fixed-top ">
-      <a class="navbar-brand" href="/"
-        ><img 
-          src="https://i.imgur.com/jYpbwF9.png"
-          alt=""
-          srcset=""
-         
-      /></a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto" style="margin-right: 100px;">
-          <li class="nav-item">
-            
-            <a  {{#if  " '/' ==  req.url "}}
-              class="nav-link active"
-              {{else}}  
-              class="nav-link" 
-            {{/if}} href="/" id="menu"
-              >Home <span class="sr-only">(current)</span></a>
-          </li>
-          {{!-- <li class="nav-item"> 
+<nav class="navbar navbar-expand-lg navbar-light bg-light menubar fixed-top ">
+  <a class="navbar-brand" href="/"><img src="https://i.imgur.com/jYpbwF9.png" alt="" srcset="" /></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto" style="margin-right: 100px;" id="ul">
+      <li class="nav-item">
+
+        <a class="nav-link"  href="/" id="menu">Home <span class="sr-only">(current)</span></a>
+      </li>
+      {{!-- <li class="nav-item"> 
             <a class="nav-link" href="" id="menu">  Hotels</a>
           </li> --}}
-          <li class="nav-item">
-            
-            <a class="nav-link" href="/tours" id="menu">Tour Packages</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/transport" id="menu">Car Hire</a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link" href="/lounge" id="menu">Oasis Lounge</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="" id="menu">Blog</a>
-          </li>
-          {{!-- <li class="nav-item">
+      <li class="nav-item">
+
+        <a class="nav-link" href="/tours" id="menu">Tour Packages</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/transport" id="menu">Car Hire</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/lounge" id="menu">Oasis Lounge</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="" id="menu">Blog</a>
+      </li>
+      {{!-- <li class="nav-item">
             <a class="nav-link" href="/signup" id="menu">SignUp</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/login" id="menu">Login</a>
           </li> --}}
-          
-          <li class="nav-item">
-            <div class="spinner-grow text-danger spinner-grow-sm " aria-hidden="true"></div>
-            <a class="nav-link  " href="/covid-test" id="menu"> Covid Test</a>
-              <!-- <div class="spinner-grow text-danger spinner-grow-sm " role="status" style="text">
+
+      <li class="nav-item">
+        <div class="spinner-grow text-danger spinner-grow-sm " aria-hidden="true"></div>
+        <a class="nav-link  " href="/covid-test" id="menu"> Covid Test</a>
+        <!-- <div class="spinner-grow text-danger spinner-grow-sm " role="status" style="text">
                 
               </div> -->
-          </li>
-          
-         
-        </ul>
-      </div>
-    </nav>
+      </li>
+
+
+    </ul>
+  </div>
+</nav>
+

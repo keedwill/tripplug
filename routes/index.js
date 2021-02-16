@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const nodeMailer = require("nodemailer");
 
 router.get("/", (req, res) => {
   res.render("index");
@@ -51,10 +52,48 @@ router.get("/covid-test", (req, res) => {
     res.render("feedback");
   });
   
-  // router.get("/logistics", (req, res) => {
-  //   res.render("logistics");
-  // });
+ router.post('/feedback',(req,res)=>{
+  const { category, email, fullname, message,phone } = req.body;
+   console.log(req.body)
+   const data = {
+    from: "princewillowoh18@gmail.com",
+    to: email,
+    subject: "Customer Feedback",
+    html: `
+    
+    <ul>
+    <li>Category : ${category}</li>
+    <li> Fullname : ${fullname}</li>
+    <li> Phone : ${phone}</li>
+    <li>Feedback : ${message}</li>
+  </ul> 
+    `,
+  };
   
+   let transporter = nodeMailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "princewillowoh18@gmail.com",
+      pass: "FRehky5214",
+    },
+  });
+  
+  transporter.sendMail(data, function (error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      req.flash(
+        "success_msg",
+        "Your Feedback has been sent."
+      );
+      res.redirect("/");
+      console.log("Email sent: " + info.response);
+    }
+  });
+  
+ })
+ 
+ 
   router.get("/about", (req, res) => {
     res.render("about");
   });
