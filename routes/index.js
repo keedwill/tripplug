@@ -80,13 +80,9 @@ router.get("/covid-test", (req, res) => {
   
   transporter.sendMail(data, function (error, info) {
     if (error) {
-      console.log(error);
     } else {
-      req.flash(
-        "success_msg",
-        "Your Feedback has been sent."
-      );
-      res.redirect("/");
+     
+      res.render("feedback",{message:"Your Feedback has been sent"});
       console.log("Email sent: " + info.response);
     }
   });

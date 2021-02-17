@@ -37,8 +37,8 @@ app.use("/", require("./routes/index"));
 
 app.use(session({
   secret: 'woot',
-  resave: false, 
-  saveUninitialized: false}));
+  resave: true, 
+  saveUninitialized: true}));
 
 //Connect flash
 app.use(flash());
