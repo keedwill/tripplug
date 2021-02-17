@@ -3,6 +3,13 @@ body {
   overflow-x: hidden;
   margin: 0;
 }
+.travel-div{
+  margin-left: 100px;
+  margin-right: 100px;
+ 
+  margin-top: 50px;
+  padding: 50px;
+}
 .modal-content
 {
  
@@ -1488,6 +1495,7 @@ display: inline-block;
 }
 #menu{
   color: black;
+ margin-right: 20px;
 }
 .nav-link {
   color: black;
@@ -1519,7 +1527,7 @@ font-weight: bolder;
 .spinner-grow{
   position: absolute;
   bottom: 65%;
-
+left: 86%;
 }
 
 .tab-btn{
@@ -1862,6 +1870,7 @@ footer > p {
   }
   .airline-head{
     height: 225px;
+  background-size: 100% 320px;
    
     align-self: center;
   }
@@ -1874,6 +1883,7 @@ footer > p {
   }
   .feedback-head{
     height: 225px;
+  background-size: 100% 320px;
     
   
   }
@@ -1888,6 +1898,8 @@ footer > p {
    
   }
   .about-head{
+  background-size: 100% 320px;
+    
     height: 225px ;
     display: flex;
     justify-content: center;
@@ -1896,6 +1908,8 @@ footer > p {
   }
   
   .travel-head{
+  background-size: 100% 320px;
+    
     height: 225px;
     display: flex;
     justify-content: center;
@@ -2074,9 +2088,9 @@ footer > p {
   font-weight: bolder;
 }
 
-.transport-text img{
+.transport-img img{
   
-  width: 60%;
+  width: 24%;
   /* margin-top:-3%; */
   margin: auto;
   margin-left: 0;
@@ -2096,70 +2110,22 @@ footer > p {
   display: flex;
 background-color: #f72f9f;
 
-  height: 550px;
+  height: 1100px;
   flex-direction: column;
   margin-top: 25px;
-}
-.transport-div2{
-  color: white;
-  
-  display: flex;
-background-color: #f9de8d;
-
-  height: 550px;
-  /* margin-left: 100px;
-  margin-right: 100px; */
-
-  padding: 10px;
-  
-  /* flex-direction: row-reverse; */
-  margin-top: 25px;
-}
-
-.transport-div3{
-  color: white;
-  
-  display: flex;
-background-color: #6d057c;
-
-  height:550px;
-  /* margin-left: 100px;
-  margin-right: 100px; */
-  
-  padding: 10px;
-  
-  
-  margin-top: 25px;
-}
-
-.transport-div4{
-  color: white;
-  background-color: #ee1e2f;
-  display: flex;
-
-  height: 650px;
-  /* margin-left: 100px;
-  margin-right: 100px; */
- 
-  padding: 10px;
-
-  margin-top: 25px;
-}
-.transport-div4 > img{
-
 }
 .transport-text{
  
   padding: 5%;
   display: flex;
-  
+  width: 100%;
   /* margin-right: auto; */
   flex-direction: column;
-  flex-basis: 100%;
   /* margin: auto; */
   /* padding: 50px; */
   /* height: 100px; */
 }
+
 .transport-text .btn{
   width: 25%;
   padding: 10px;
@@ -2370,6 +2336,8 @@ background-color: #6d057c;
     display: flex;
     justify-content: center;
     align-items: center;
+  background-size: 100% 320px;
+    
   }
   .tour-head p{
     
@@ -2397,6 +2365,7 @@ background-color: #6d057c;
   
     height: 225px;
     
+  background-size: 100% 320px;
    
     
   }
@@ -2432,6 +2401,12 @@ background-color: #6d057c;
     margin-left: 0;
    
     
+  }
+  .travel-div{
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 30px;
   }
   
 }

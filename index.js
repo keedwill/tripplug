@@ -3,6 +3,7 @@ const path = require("path");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const flash = require('connect-flash')
+const session = require("express-session");
 
 const dotenv = require("dotenv");
 const exphbs = require("express-handlebars");
@@ -34,6 +35,15 @@ app.use(express.static(path.join(__dirname, "public")));
 //routes
 app.use("/", require("./routes/index"));
 
+app.use(session({
+  secret: 'woot',
+  resave: false, 
+  saveUninitialized: false}));
+
+//Connect flash
+app.use(flash());
+
+
 //global vars
 app.use((req, res, next) => {
   res.locals.success_msg = req.flash("success_msg");
@@ -41,12 +51,6 @@ app.use((req, res, next) => {
   res.locals.error = req.flash("error");
   next();
 });
-
-
-//Connect flash
-app.use(flash());
-
-
   const PORT = process.env.PORT || 3000;
 
   app.listen(PORT, () => {
